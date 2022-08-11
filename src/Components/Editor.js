@@ -23,12 +23,18 @@ const Editor = (props) => {
         <div className={`editor-container ${open ? '' : 'collapsed'}`}>
             <div className="editor-title">
                 {displayName}
-
+                <button
+                    type="button"
+                    className="expand-collapse-btn"
+                    onClick={() => setOpen(prevOpen => !prevOpen)}
+                >
+                    {open ? <img src="" alt="" /> : <img src="" alt=""/>}
+                </button>
             </div>
             <ControlledEditor
                 onBeforeChange={handleChange}
                 value={value}
-                className="code-mirror-wrapper"
+                className="code-mirror-wrapper text-start"
                 options={{
                     lineWrapping: true,
                     lint: true,

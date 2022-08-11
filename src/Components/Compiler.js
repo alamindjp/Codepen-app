@@ -44,7 +44,7 @@ const Compiler = () => {
                     onChange={setJs}
                 />
             </div>
-            <h1 className="text-5xl lg:bg-inherit p-5 text-center">Output</h1>
+            <h1 className="text-3xl lg:bg-[#6c6c6d] p-3 text-center">Output</h1>
             <div className="pane">
                 <iframe
                     srcDoc={srcDoc}
